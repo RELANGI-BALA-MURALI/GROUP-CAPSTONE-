@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+        integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+        crossorigin="anonymous"></script>
+    <style>
+        .nav-bar-items {
+            margin-left: 450px;
+        }
+        
+        nav li a:hover {
+            background-color: #fff;
+            color: #ddc37a81;
+        }
+
+        .navbar-font-styles {
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .bg-container {
+            background-image: url('https://img.freepik.com/free-photo/networking-concept-still-life-arrangement_23-2149035781.jpg?w=996&t=st=1697564408~exp=1697565008~hmac=02920524869037f0cd9019b2d5a086daee2f2cecdf9bf1e13bfd0ab50a16164a');
+            background-size: cover;
+            padding: 20px;
+            position: relative;
+        }
+
+        .logo-img {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 70px;
+            height: 70px;
+        }
+
+        main {
+            max-width: 1300px;
+            margin-top: 120px auto;
+            margin-bottom: 100px;
+            border-radius: 20px;
+            margin-top: 200px;
+            margin: 20px;
+            text-align: center;
+            padding: 20px;
+            background-color: rgb(255, 255, 255, 0.4);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            animation: slide-up 1s ease-out;
+        }
+
+        @keyframes slide-up {
+            0% {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            margin-top: 264px;
+            border-top-right-radius: 5px;
+            border-top-left-radius: 5px;
+            border-radius: 10px;
+            margin-bottom: 0px;
+            background-color: #ddc37a81;
+            color: #000;
+            animation: slide-up 1s ease-out;
+        }
+
+        marquee {
+            color: #000;
+        }
+
+        .lead {
+            font-size: 36px;
+            font-weight: bold;
+            text-align: center;
+            color: #fff;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .lead .alumni-box,
+        .lead .network-box {
+            background-color: transparent;
+            padding: 0;
+            margin: 0;
+            color: #fff;
+        }
+
+        .nav-link-box {
+            background-color: #ddc37a81;
+            padding: 10px;
+            border-radius: 10px;
+            margin: 5px;
+            color: #fff;
+        }
+
+        .info-paragraph {
+            font-size: 16px;
+            text-align: left;
+            color: #666;
+        }
+
+        .row {
+            margin-right: -15px;
+            margin-left: -15px;
+        }
+
+        .col-md-3 {
+            width: 25%;
+        }
+
+        .team-member.box-style-1 {
+            margin-top: 0;
+        }
+
+        .box-style-1 {
+            text-align: center;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        .overlay-container {
+            position: relative;
+            display: block;
+            overflow: hidden;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 7px;
+        }
+
+        .image-container img {
+            width: 70px;
+            height: 100px;
+            border-radius: 10px;
+            margin: 5px;
+        }
+
+        body {
+            animation: fade-in 1s ease-out;
+        }
+
+        @keyframes fade-in {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+            .section {
+        padding: 40px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        margin-top: 20px;
+        }
+
+        .section h1 {
+            font-size: 36px;
+            color: #333;
+            text-align: center;
+        }
+
+        .section p {
+            font-size: 16px;
+            color: #666;
+            text-align: justify;
+            margin-top: 20px;
+        }
+
+        .section .separator {
+            width: 100%;
+            height: 2px;
+            background-color: #ccc;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-container">
+        <img src="https://images.collegedunia.com/public/college_data/images/logos/1480310942logo.png"
+            alt="Logo" class="logo-img">
+        <nav class="navbar navbar-expand-lg navbar-light bg-transparent shadow-lg navbar-font-styles">
+            <a class="navbar-brand" href="#">
+                <span class="lead">
+                    <span class="alumni-box">Alumni</span>
+                    <span class="network-box">Network</span>
+                </span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse  nav-bar-items" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link nav-link-box" href="/home">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link nav-link-box" href="/alumni">Alumni</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link nav-link-box" href="/students">Students</a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link nav-link-box" href="/login">Login</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link nav-link-box" href="/register">Register</a>
+                    </li>
+                </div>
+            </nav>
+            <div class="d-flex flex-row justify-content-center">
+                <main>
+                    <div class="row">
+                        <div class="col-12">
+                            <p class="lead text-center">Vishnu Institute of Technology</p>
+                            <p>"Vishnu Institute of Technology, was established in 2008 by Sri Vishnu Educational
+                                Society (SVES), a leading educational trust to promote quality education, under the
+                                aegis of eminent philanthropist Padma Bhushan Dr. B.V.Raju (Late). The institute is
+                                approved by AICTE and is permanently affiliated to JNTUK, Kakinada. It has got
+                                Autonomous status in the academic year 2019-20 and is accredited by NBA and NAAC 'A+'
+                                with 3.51 CGPA."</p>
+                        </div>
+                       
+                    </div>
+                    <div class="image-container">
+                        <div class="overlay-container">
+                            <img src="naac.jpg" alt="">
+                        </div>
+                        <div class="overlay-container">
+                            <img src="nba.jpg" alt="">
+                        </div>
+                        <div class="overlay-container">
+                            <img src="Jntuk-logo.png" alt="">
+                        </div>
+                        <div class="overlay-container">
+                            <img src="AICTE.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="section clearfix">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h1 class="text-center">About Us</h1>
+                                    <div class="separator"></div>
+                                    <p class="lead text-center">Sri Vishnu Educational Society has stood first among equals because of its quest and hard work to develop as an educational society which stands apart.</p>
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <h2 class="title">Sri Vishnu Educational Society</h2>
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <img src="logo.jpg" alt="SVES">
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <p>The Society aims and strives for continuous improvement in the field of education and is committed to delivering world class education in various fields to students from different strata. </p>
+                                                </div>
+                                            </div>
+                                            <p> Our founder chairman Late Padma Bhushan Dr. B.V. Raju, through his excellent vision and foresight established many educational institutions. These institutions are playing a vital role in moulding and shaping the future of thousands of students year after year.</p>
+                                            <!--  -->
+        
+                                                <ul class="social-links light large">
+                                                <li class="large">
+                                                    <a href="https://www.youtube.com/watch?v=cMA3DLY-DT4" target="_blank"><img src="centenary.jpg"></a>									
+                                                </li>
+                                                <li class="">
+                                                    <a href="https://vishnu.edu.in/VishnuEra.php"><img src="vishnu-era.png" target="_blank"></a>										
+                                                </li>
+                                                <li class="">
+                                                    <a href="http://vedic.edu.in"><img src="vedic.png" target="_blank"></a>										
+                                                </li>
+                                            </ul>
+                                            <!--  -->
+                                                                                
+                                            
+                                        <a href="http://srivishnu.edu.in" target="_blank" class="btn btn-white">S V E S</a> 
+                                        <a href="https://vishnu.edu.in/Management.php" class="btn btn-white">Management Team</a>
+                                        
+        
+        
+                                            <div class="space hidden-md hidden-lg"></div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="panel-group panel-dark" id="accordion">
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h4 class="panel-title">
+                                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                                                Chairman - SVES
+                                                            </a>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="collapseOne" class="panel-collapse collapse in">
+                                                        <div class="panel-body">
+                                                            <p><img src="chaiman.JPEG" alt="Chairman" title="Chairman" class="img-circle" width="80" height="80" style="float: left;">Sri. K.V. Vishnu Raju began his career as a Chemical Engineer in M/s. E.T. Dupont De Nemours, USA, from 1989 to 1991, where he looked after research and development in polymers, ceramics and adhesives. He returned to India in 1992 and served as the Executive Director of M/s. Raasi Cement Ltd., Hyderabad till 1995. The following year, he was promoted as Joint Managing Director of M/s. Raasi Cement Ltd., a post that he held till April 1998. In December 1999, he took over as the Managing Director of M/s. Anjani Portland Cement Ltd., Hyderabad.   </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h4 class="panel-title">
+                                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" class="collapsed">
+                                                                Vice Chairman - SVES
+                                                            </a>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="collapseTwo" class="panel-collapse collapse">
+                                                        <div class="panel-body">
+                                                            <p><img src="vice-chairman.jpg" alt="Chairman" title="Chairman" class="img-circle" width="80" height="80" style="float: left;">Sri Ravichandran Rajagopal, is a graduate in Mechanical Engineering from National Institute of Technology, Tiruchirapalli, and a postgraduate in Management from Indian Institute of Management, Calcutta. He started his professional career with the Swiss multinational company Novartis, India where he served in various capacities including Business Development, New Product and Application development, and Vendor Development.	</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+        
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h4 class="panel-title">
+                                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" class="collapsed">
+                                                                Secretary - SVES
+                                                            </a>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="collapseThree" class="panel-collapse collapse">
+                                                        <div class="panel-body">
+                                                            <p><img src="Secretary.jpg" alt="Chairman" title="Chairman" class="img-circle" width="80" height="80" style="float: left;">Sri Aditya Vissam is the Secretary of the Sri Vishnu Educational Society, and is the youngest member of the management team. He graduated as an Industrial Engineer from the Penn State University, USA and did his Management studies, an MBA from Imperial College, London. Aditya comes with rich experience in companies both in US and UK. He worked in Office Depot, Minneapolis and post his MBA he did a stint as Operations Manager at Amazon, London. Aditya comes with deep insights into quality education in the areas of future skills required to be embedded in the courses offered by our autonomous colleges across Sri Vishnu institutions, and industry relevant knowledge to drive disruptions in higher education. He is in close coordination with the Vishnu Educational Development and Innovation Centre (VEDIC) at Hyderabad, a campus dedicated to innovations in teaching pedagogy, learning styles and continuous assessment methods for active learning of students.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+        
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h4 class="panel-title">
+                                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour" class="collapsed">
+                                                                Director &amp; Principal
+                                                            </a>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="collapseFour" class="panel-collapse collapse">
+                                                        <div class="panel-body">
+                                                            <p><img src="principal.jpg" alt="Chairman" title="Chairman" class="img-circle" width="80" height="80" style="float: left;">Dr. D. Suryanarayana, Director &amp; Principal is an expert and outspoken interpreter with research activities, great administrative qualities and an eminent Professor of Computer Science and Engineering. He has 30 years of experience in academics and administration achieving high results for the organization. He is a master in management, planning, coordination, and budgeting. He took the charge of implementing the strategies, regulations, and systems to guarantee that all understudies are regulated in a safe conventional indiscriminate learning environment that meets the endorsed curricula and mission of the foundation. He develops an environment that encourages open communication with colleagues, students and community. </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </main>
+              
+            <footer>
+                <marquee>&copy; 2023 Alumni Network</marquee>
+            </footer>
+    </div>
+
+</body>
+
+</html>
